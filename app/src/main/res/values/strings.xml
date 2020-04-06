@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">AndroidArshinsky.3.1</string>
+    <string name="titleTxt">«Комплексная система мониторинга здоровья»   Аршинский В.Л.</string>
+    <string name="nameTxt">ФИО</string>
+    <string name="ageTxt">Возраст</string>
+    <string name="saveButTxt">Сохранить</string>
+    <string name="logoTxt">logo</string>
+    <string name="presBut">Показатели давления</string>
+    <string name="healthBut">Показатели здоровья</string>
+    <string name="inputTv">Ввести показатели</string>
+
+    <string name="succesUD">Данные успешно введены</string>
+
+    <string name="needDataEr">Вначале введите данные</string>
+    <string name="emptyErr">Пожалуйста, заполните поле</string>
+    <string name="numbErr">Вводите только цифры</string>
+    <string name="negAgeErr">Возраст не может быть меньше 0</string>
+    <string name="titlePress">Добавление значений индивидуальных  показателей давления</string>
+    <string name="hintEdUp">Верхн.давление</string>
+    <string name="chkTachText">Тахикардия</string>
+    <string name="hintDownPres">Нижн. давление</string>
+    <string name="hintPulse">Пульс</string>
+    <string name="hintDate">Дата</string>
+
+
+</resources>
