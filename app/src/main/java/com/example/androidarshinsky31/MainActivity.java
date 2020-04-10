@@ -47,13 +47,16 @@ public class MainActivity extends AppCompatActivity {
                         userdata = new UserData(fio, age);
                         flag = true;
                         Toast.makeText(MainActivity.this, getString(R.string.succesUD), Toast.LENGTH_SHORT).show();
+                        Log.i(TAG, "Handler Save button finished");
                     }
                 } catch (NumberFormatException e) {
+                    Log.i(TAG, "Handler Save button NumberFormatException");
                     ageEd.requestFocus();
                     ageEd.setError(getString(R.string.numbErr));
                     flag = false;
 
                 } catch (RuntimeException e) {
+                    Log.i(TAG, "Handler Save button RuntimeException");
                     ageEd.requestFocus();
                     ageEd.setError(e.getMessage());
                     flag = false;
@@ -65,19 +68,32 @@ public class MainActivity extends AppCompatActivity {
         pressBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(TAG, "Add pressure measurement button clicked");
                 pressBut.setError(null);
                 if(flag){
                     startActivity(new Intent(MainActivity.this,PressureActivity.class));
-
-                }
-                else{
+                } else {
                     pressBut.requestFocus();
                     pressBut.setError(getString(R.string.needDataEr));
                     Toast.makeText(MainActivity.this, getString(R.string.needDataEr), Toast.LENGTH_SHORT).show();
                 }
             }
         });
+        healthBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "Add health measurement button clicked");
+                pressBut.setError(null);
+                if (flag) {
+                    startActivity(new Intent(MainActivity.this, BodyCondActivity.class));
 
+                } else{
+                    pressBut.requestFocus();
+                    pressBut.setError(getString(R.string.needDataEr));
+                    Toast.makeText(MainActivity.this, getString(R.string.needDataEr), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private void init() {

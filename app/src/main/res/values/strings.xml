@@ -24,5 +24,7 @@
     <string name="hintTime">Время</string>
     <string name="addPresBut">Добавить</string>
 
-
+    <string name="titleBody">Добавление жизненных показателей здоровья</string>
+    <string name="hintWeight">Вес</string>
+    <string name="hintSteps">Шаги</string>
 </resources>
