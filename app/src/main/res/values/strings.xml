@@ -21,6 +21,8 @@
     <string name="hintDownPres">Нижн. давление</string>
     <string name="hintPulse">Пульс</string>
     <string name="hintDate">Дата</string>
+    <string name="hintTime">Время</string>
+    <string name="addPresBut">Добавить</string>
 
 
 </resources>

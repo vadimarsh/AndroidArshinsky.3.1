@@ -4,22 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "ActionsMainActiv";
+
     private EditText fionEd;
     private EditText ageEd;
     private Button saveBut;
     private Button pressBut;
     private Button healthBut;
 
-
     private boolean flag = false;
-
-    private UserData userdata;
+    private static UserData userdata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         saveBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(TAG, "Click Save button performed");
                 try {
 
                     String fio = fionEd.getText().toString();

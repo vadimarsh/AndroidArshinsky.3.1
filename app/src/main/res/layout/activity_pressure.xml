@@ -17,8 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgLogoPres"
@@ -39,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -47,59 +47,61 @@
 
         <EditText
             android:id="@+id/edUpPres"
-            android:layout_width="198dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:ems="10"
             android:hint="@string/hintEdUp"
             android:importantForAutofill="no"
-            android:inputType="textPersonName" />
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/edDownPres"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/hintDownPres"
             android:importantForAutofill="no"
-            android:inputType="textPersonName" />
+            android:inputType="numberDecimal" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="409dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <EditText
             android:id="@+id/edPulse"
-            android:layout_width="match_parent"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:ems="10"
             android:hint="@string/hintPulse"
-            android:inputType="textPersonName"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal" />
 
         <CheckBox
             android:id="@+id/chbTach"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/chkTachText" />
-
+            android:text="@string/chkTachText"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="288dp" />
     </LinearLayout>
 
+
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,21 +109,33 @@
 
         <EditText
             android:id="@+id/editDate"
-            android:layout_width="198dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:focusable="false"
             android:hint="@string/hintDate"
             android:inputType="date"
             />
 
-
         <EditText
             android:id="@+id/editTime"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:focusable="false"
+            android:hint="@string/hintTime"
+
             android:inputType="time" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/savePressBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addPresBut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
