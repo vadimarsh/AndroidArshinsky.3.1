@@ -72,7 +72,9 @@ public class MainActivity extends AppCompatActivity {
                 pressBut.setError(null);
                 if(flag){
                     startActivity(new Intent(MainActivity.this,PressureActivity.class));
+                    Log.i(TAG, "Pressure Activity activated");
                 } else {
+                    Log.i(TAG, "Handler button Pressure Activity throw exception");
                     pressBut.requestFocus();
                     pressBut.setError(getString(R.string.needDataEr));
                     Toast.makeText(MainActivity.this, getString(R.string.needDataEr), Toast.LENGTH_SHORT).show();
@@ -86,8 +88,9 @@ public class MainActivity extends AppCompatActivity {
                 pressBut.setError(null);
                 if (flag) {
                     startActivity(new Intent(MainActivity.this, BodyCondActivity.class));
-
+                    Log.i(TAG, "Body Condition Activity activated");
                 } else{
+                    Log.i(TAG, "Handler button Body Condition Activity throw exception");
                     pressBut.requestFocus();
                     pressBut.setError(getString(R.string.needDataEr));
                     Toast.makeText(MainActivity.this, getString(R.string.needDataEr), Toast.LENGTH_SHORT).show();
